@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <style>
+            .game_box {
+                position: absolute;
+                border: 1px solid;
+            }
+            .bg_box {
+                width: 1280px;
+                height: 720px;
+                top: 0px;
+                left: 0px;
+            }
+            .name_box {
+                width: 200px;
+                height: 50px;
+                top: 450px;
+                left: 10px;
+            }
+            .msg_box {
+                width: 1260px;
+                height: 200px;
+                top: 510px;
+                left: 10px;
+            }
+            .buttons_box {
+                width: 840px;
+                height: 440px;
+                top: 60px;
+                left: 220px;
+            }
+            .actor{
+                position: absolute;
+                bottom: 0px;
+            }
+        </style>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div class='game_box bg_box'>
+            <img id='bgBox' src='' alt='배경' class='game_box bg_box' />
+            <img id='actorBox' src='' alt='액터' class='actor'/>
+
+            </div>
+            <div id='nameBox' class='game_box name_box'>
+
+            </div>
+            <div id='msgBox' class='game_box msg_box'>
+
+            </div>
+            <div id='buttonsBox' class='game_box buttons_box'>
+
+            </div>
+        </div>
+        <script src='javascripts/main.js'>
+            
+        </script>
+    </body>
+</html>
