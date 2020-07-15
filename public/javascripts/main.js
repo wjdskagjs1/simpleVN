@@ -2,29 +2,8 @@ const state = {
     currentScene: 'scene0',
     currentPage: 0,
 };
-const Scenes = {
-    scene0: [
-        Page({
-            buttons: 'a->scene1(0)',
-            name: '이름',
-            msg: '메시지',
-            bg: '',
-            actor: 'images/actors/1.png',
-        })
-    ],
-    scene1: [
-        Page({
-            buttons: '',
-            name: '이름1',
-            msg: '테스트1',
-            bg: '',
-            actor: 'images/actors/2.png',
-        })
-    ],
-};
 function Page({ buttons, name, msg, bg, actor}){
     let newButtons = buttons.split('|');
-    const buttonsBox = document.getElementById('buttonsBox');
 
     if(buttons !== ''){
         newButtons.forEach((element, index)=>{
@@ -91,7 +70,18 @@ function render({buttons, name, msg, bg, actor}){
         buttonsBox.style.display = '';
         buttonsBox.innerHTML += `<button type='button' class='choose_button' onclick='goto("${element.scene}", ${element.page})'>${element.caption}</button>`;
     });
+    if(name === ''){
+        nameBox.style.display = 'none';
+    }else{
+        nameBox.style.display = '';
+    }
     nameBox.textContent = name;
+
+    if(msg === ''){
+        msgBox.style.display = 'none';
+    }else{
+        msgBox.style.display = '';
+    }
     msgBox.textContent = msg;
     bgBox.src = bg;
     actorBox.src = actor;

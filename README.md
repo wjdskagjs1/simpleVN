@@ -1,1 +1,2 @@
 # simpleVN
+simple visual novel
